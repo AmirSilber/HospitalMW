@@ -5,6 +5,6 @@
         public BreechIntern(int id, string name, string title): base(id, name, title)
         { }
 
-        public override double CalcMonthlySalary(double hoursWorked) => base.CalcMonthlySalary(hoursWorked) * 1.3;
+        public override double CalcMonthlySalary() => base.CalcMonthlySalary() * 1.3;
     }
 }

@@ -8,10 +8,6 @@ namespace MaternityWard.Classes.Ward.Nurses
 
         public Nurse(int id, string name, string title) : base(id, name, title) { }
 
-        public override double CalcMonthlySalary(double hoursWorked) => NurseHourlyRate * hoursWorked;
-        public override double CalcMonthlySalary()
-        {
-            throw new System.NotImplementedException("Please input hours worked");
-        }
+        public override double CalcMonthlySalary() => NurseHourlyRate * this.HoursWorked;
     }
 }

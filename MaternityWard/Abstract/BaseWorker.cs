@@ -18,8 +18,6 @@ namespace MaternityWard.Abstract
             this.Title = title;
         }
 
-        public abstract double CalcMonthlySalary(double hoursWorked);
-
         public abstract double CalcMonthlySalary();
 
         public void InsertHoursWorked(DateTime clockIn, DateTime clockOut)
@@ -30,7 +28,7 @@ namespace MaternityWard.Abstract
         
         public void DisplayCurrentSalary()
         {
-            Console.WriteLine(CalcMonthlySalary(HoursWorked));
+            Console.WriteLine(CalcMonthlySalary());
         }
 
     }

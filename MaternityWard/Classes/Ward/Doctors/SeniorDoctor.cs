@@ -5,15 +5,12 @@
         public SeniorDoctor(int id, string name, string title) : base(id, name, title)
         { }
 
-        public override double CalcMonthlySalary(double hoursWorked)
+        public override double CalcMonthlySalary()
         {
-            var salary = base.CalcMonthlySalary(hoursWorked);
-            if (hoursWorked > 50)
-            {
-                return salary * 1.5;
-            }
-            
-            return salary;
+            if (this.HoursWorked > 50)
+                return DoctorHourlyRate * 200 * 1.05 * 1.5;
+            else
+                return base.CalcMonthlySalary();
         }
     }
 }

@@ -9,11 +9,7 @@ namespace MaternityWard.Classes
 
         public Paramedic(int id, string name, string title) : base(id, name, title) { }
 
-        public override double CalcMonthlySalary(double hoursWorked) => paramedicHourlyRate * hoursWorked;
+        public override double CalcMonthlySalary() => paramedicHourlyRate * this.HoursWorked;
 
-        public override double CalcMonthlySalary()
-        {
-            throw new System.NotImplementedException("Please input hours worked");
-        }
     }
 }

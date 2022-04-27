@@ -15,9 +15,5 @@ namespace MaternityWard.Classes.Managers
 
         public override double CalcMonthlySalary() => ManagerMonthlySalary;
 
-        public override double CalcMonthlySalary(double hoursWorked)
-        {
-            throw new NotImplementedException("Managers don't clock in, do not input hours worked");
-        }
     }
 }

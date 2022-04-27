@@ -10,8 +10,6 @@ namespace MaternityWard.Interfaces
 
         double HoursWorked { get; set; }
 
-        double CalcMonthlySalary(double hoursWorked);
-
         double CalcMonthlySalary();
 
         void InsertHoursWorked(DateTime clockIn, DateTime clockOut);
