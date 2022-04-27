@@ -15,7 +15,7 @@ namespace MaternityWard.Classes.Administration.Cooks
             if (this.HoursWorked > 50)
                 return cookHourlyRate * 200 * 1.5 * 1.3 * 1.05;
             else
-                return base.CalcMonthlySalary() * 1.05 * 1.3;
+                return base.CalcMonthlySalary() * 1.3;
         }
     }
 }
