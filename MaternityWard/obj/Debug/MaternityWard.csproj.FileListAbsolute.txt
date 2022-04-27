@@ -1,0 +1,16 @@
+C:\Users\user\source\repos\MaternityWard\MaternityWard\obj\Debug\MaternityWard.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\MaternityWard\MaternityWard\obj\Debug\MaternityWard.csproj.SuggestedBindingRedirects.cache
+C:\Users\user\source\repos\MaternityWard\MaternityWard\obj\Debug\MaternityWard.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\MaternityWard\MaternityWard\bin\Debug\MaternityWard.exe.config
+C:\Users\user\source\repos\MaternityWard\MaternityWard\bin\Debug\MaternityWard.exe
+C:\Users\user\source\repos\MaternityWard\MaternityWard\bin\Debug\MaternityWard.pdb
+C:\Users\user\source\repos\MaternityWard\MaternityWard\obj\Debug\MaternityWard.exe
+C:\Users\user\source\repos\MaternityWard\MaternityWard\obj\Debug\MaternityWard.pdb
+C:\code\CSharp\MaternityWard\MaternityWard\MaternityWard\bin\Debug\MaternityWard.exe.config
+C:\code\CSharp\MaternityWard\MaternityWard\MaternityWard\bin\Debug\MaternityWard.exe
+C:\code\CSharp\MaternityWard\MaternityWard\MaternityWard\bin\Debug\MaternityWard.pdb
+C:\code\CSharp\MaternityWard\MaternityWard\MaternityWard\obj\Debug\MaternityWard.csproj.AssemblyReference.cache
+C:\code\CSharp\MaternityWard\MaternityWard\MaternityWard\obj\Debug\MaternityWard.csproj.SuggestedBindingRedirects.cache
+C:\code\CSharp\MaternityWard\MaternityWard\MaternityWard\obj\Debug\MaternityWard.csproj.CoreCompileInputs.cache
+C:\code\CSharp\MaternityWard\MaternityWard\MaternityWard\obj\Debug\MaternityWard.exe
+C:\code\CSharp\MaternityWard\MaternityWard\MaternityWard\obj\Debug\MaternityWard.pdb
