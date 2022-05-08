@@ -8,7 +8,7 @@ namespace HospitalMW.Classes.Administration.Janitors
 {
     public class JanitorSupervisor : Janitor
     {
-        public JanitorSupervisor(int id, string name, string title) : base(id, name, title) { }
+        public JanitorSupervisor(string id, string name, string title) : base(id, name, title) { }
 
         public override double CalcMonthlySalary()
         {

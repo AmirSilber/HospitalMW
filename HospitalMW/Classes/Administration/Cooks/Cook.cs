@@ -6,7 +6,7 @@ namespace HospitalMW.Classes
     {
         protected const double cookHourlyRate = 40;
 
-        public Cook(int id, string name, string title) : base(id, name, title) {}
+        public Cook(string id, string name, string title) : base(id, name, title) {}
 
         public override double CalcMonthlySalary() => cookHourlyRate * this.HoursWorked * 1.05;
 

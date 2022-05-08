@@ -8,6 +8,6 @@ namespace HospitalMW.Classes.Managers
 {
     public class AdminManager : Manager
     {
-        public AdminManager(int id, string name, string title) : base(id, name, title) { }
+        public AdminManager(string id, string name, string title) : base(id, name, title) { }
     }
 }

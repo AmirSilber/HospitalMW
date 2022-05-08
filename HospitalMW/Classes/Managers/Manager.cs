@@ -11,7 +11,7 @@ namespace HospitalMW.Classes.Managers
     {
         protected const double ManagerMonthlySalary = 30000;
 
-        public Manager(int id, string name, string title) : base(id, name, title) { }
+        public Manager(string id, string name, string title) : base(id, name, title) { }
 
         public override double CalcMonthlySalary() => ManagerMonthlySalary;
 

@@ -67,6 +67,10 @@
     <Compile Include="Classes\Administration\Janitors\SeniorJanitor.cs" />
     <Compile Include="Classes\Administration\Janitors\ToxicWasteJanitor.cs" />
     <Compile Include="Classes\Administration\LineServer.cs" />
+    <Compile Include="Classes\Commands\AddWorker.cs" />
+    <Compile Include="Classes\Commands\NullCommand.cs" />
+    <Compile Include="Classes\Commands\RemoveWorker.cs" />
+    <Compile Include="Classes\Commands\ViewSalary.cs" />
     <Compile Include="Classes\Managers\AdminManager.cs" />
     <Compile Include="Classes\Managers\Manager.cs" />
     <Compile Include="Classes\Managers\WardManager.cs" />
@@ -82,10 +86,13 @@
     <Compile Include="Classes\Ward\Nurses\Midwife.cs" />
     <Compile Include="Classes\Ward\Nurses\Nurse.cs" />
     <Compile Include="Classes\Ward\Paramedic.cs" />
+    <Compile Include="Classes\Commands\CommandFactory.cs" />
+    <Compile Include="Interfaces\ICommand.cs" />
     <Compile Include="Interfaces\IWorker.cs" />
-    <Compile Include="localWorkersDB.cs" />
+    <Compile Include="Classes\localWorkersDB.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Classes\WorkerFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

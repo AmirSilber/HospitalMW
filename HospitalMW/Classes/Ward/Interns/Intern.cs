@@ -6,7 +6,7 @@ namespace HospitalMW.Classes.Ward.Interns
     {
         protected const double internHourlyRate = 50;
 
-        public Intern(int id, string name, string title) : base(id, name, title) {}
+        public Intern(string id, string name, string title) : base(id, name, title) {}
 
         public override double CalcMonthlySalary() => internHourlyRate * this.HoursWorked;
 

@@ -9,6 +9,6 @@ namespace HospitalMW.Classes.Managers
 {
     class ViceManager : Manager
     {
-        public ViceManager(int id, string name, string title) : base(id, name, title) { }
+        public ViceManager(string id, string name, string title) : base(id, name, title) { }
     }
 }

@@ -6,7 +6,7 @@ namespace HospitalMW.Classes
     {
         protected const double janitorHourlyRate = 30;
 
-        public Janitor(int Id, string Name, string Title) : base(Id, Name, Title) {}
+        public Janitor(string id, string Name, string Title) : base(id, Name, Title) {}
 
         public override double CalcMonthlySalary() => janitorHourlyRate * this.HoursWorked;
 

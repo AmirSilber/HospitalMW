@@ -9,7 +9,7 @@ namespace HospitalMW.Classes.Managers
 {
     public class WardManager : Manager
     {
-        public WardManager(int id, string name, string title) : base(id, name, title) { }
+        public WardManager(string id, string name, string title) : base(id, name, title) { }
 
         public override double CalcMonthlySalary() => base.CalcMonthlySalary() * 2;
     }

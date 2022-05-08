@@ -4,7 +4,7 @@ namespace HospitalMW.Interfaces
 {
     public interface IWorker
     {
-        int Id { get; set; }
+        string id { get; set; }
         string Name { get; set; }
         string Title { get; set; }
 

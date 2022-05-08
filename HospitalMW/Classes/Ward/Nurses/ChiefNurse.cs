@@ -2,7 +2,7 @@
 {
     public class ChiefNurse : Nurse
     {
-        public ChiefNurse(int id, string name, string title) : base(id, name, title)
+        public ChiefNurse(string id, string name, string title) : base(id, name, title)
         { }
 
         public override double CalcMonthlySalary()

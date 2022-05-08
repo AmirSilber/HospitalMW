@@ -8,7 +8,7 @@ namespace HospitalMW.Classes.Administration.Cooks
 {
     public class Chef : Cook
     {
-        public Chef(int id, string name, string title) : base(id, name, title) { }
+        public Chef(string id, string name, string title) : base(id, name, title) { }
 
         public override double CalcMonthlySalary()
         {

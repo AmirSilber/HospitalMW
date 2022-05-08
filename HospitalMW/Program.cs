@@ -7,36 +7,45 @@ using HospitalMW.Classes.Ward.Nurses;
 using HospitalMW.Classes.Ward.Interns;
 using HospitalMW.Classes.Managers;
 using HospitalMW.Interfaces;
+using HospitalMW.Classes.Commands;
 
 namespace HospitalMW
 {
     internal static  class Program
     {
-
         private static void Main(string[] args)
         {
 
-            Dictionary<int, BaseWorker> workers = new Dictionary<int, BaseWorker>();
+            Console.WriteLine("Welcome to the client, use the following commands: \n" +
+                "ADDWORKER - Add a worker to the DB \n" +
+                "REMOVEWORKER - Remove a worker from the DB \n" +
+                "CLOCKIN *id* - Clock in a worker by id \n" +
+                "CLOCKOUT *id* - Clock out a worker by id\n" +
+                "VIEWSALARY - View a worker's current salary \n" +
+                "TERMINATE - Terminate the program \n");
 
-            BaseWorker w001 = new WardManager(001, "Amir", "Chief Of Medicine");
-            BaseWorker w002 = new ViceManager(002, "Yotam", "Vice Chief Of Medicine");
-            BaseWorker w003 = new AdminManager(003, "Ronen", "Chief Of Administration");
-            BaseWorker w004 = new ExpertDoctor(004, "Assaf", "Expert Doctor");
-            BaseWorker w005 = new SeniorDoctor(005, "Alma", "Senior Doctor");
-            BaseWorker w006 = new Doctor(006, "Hanan", "Junior Doctor");
-            BaseWorker w007 = new BreechIntern(007, "Yogev", "Breech Intern");
-            BaseWorker w008 = new Intern(008, "Kami", "Intern");
-            BaseWorker w009 = new ChiefNurse(009, "Sheila", "Chief Nurse");
+            string adminInput = Console.ReadLine();
 
-            List<BaseWorker> listOfEmployees = new List<BaseWorker>()
+            while (adminInput != "TERMINATE")
             {
-                w001, w002, w003, w004, w005, w006, w007, w008, w009
-            };
-
-            LocalWorkersDB workersDB = new LocalWorkersDB();
-            workersDB.AddListOfWorkers(listOfEmployees);
-
-            Console.WriteLine(workersDB.GetWorker(001).CalcMonthlySalary());
+                switch (adminInput.ToUpper())
+                {
+                    case "ADDWORKER":
+                        CommandFactory.GetCommand<AddWorker>().Execute();
+                        break;
+                    case "REMOVEWORKER":
+                        CommandFactory.GetCommand<RemoveWorker>().Execute();
+                        break;
+                    case "VIEWSALARY":
+                        CommandFactory.GetCommand<ViewSalary>().Execute();
+                        break;
+                        
+                    default:
+                        CommandFactory.GetCommand<NullCommand>().Execute();
+                        break;
+                }
+                adminInput = Console.ReadLine();
+            }
         }
     }
 }

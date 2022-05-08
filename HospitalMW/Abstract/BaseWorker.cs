@@ -5,15 +5,15 @@ namespace HospitalMW.Abstract
 {
     public abstract class BaseWorker : IWorker
     {
-        public int Id { get; set; }
+        public string id { get; set; }
         public string Name { get; set; }
         public string Title { get; set; }
 
         public double HoursWorked { get; set; }
 
-        protected BaseWorker(int id, string name, string title)
+        protected BaseWorker(string id, string name, string title)
         {
-            this.Id = id;
+            this.id = id;
             this.Name = name;
             this.Title = title;
         }
