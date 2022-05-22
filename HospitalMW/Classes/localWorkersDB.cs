@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using HospitalMW.Interfaces;
 
 namespace HospitalMW
 {
@@ -33,6 +34,8 @@ namespace HospitalMW
         {
             return this.workers[workerid];
         }
+
+        //public LocalWorkersDB Execute(LocalWorkersDB tempDB) { return tempDB; }
 
         /*public void DisplayMonthlySalary(string workerid)
         {

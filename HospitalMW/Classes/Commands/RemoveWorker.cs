@@ -11,7 +11,7 @@ namespace HospitalMW.Classes.Commands
     {
         public LocalWorkersDB Execute(LocalWorkersDB tempDB)
         {
-
+            return tempDB;
         }
     }
 }

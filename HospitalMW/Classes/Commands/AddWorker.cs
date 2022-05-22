@@ -7,6 +7,7 @@ using HospitalMW.Interfaces;
 using HospitalMW.Abstract;
 using HospitalMW;
 using HospitalMW.Classes.Ward.Doctors;
+using HospitalMW.Classes;
 
 
 namespace HospitalMW.Classes.Commands
@@ -14,10 +15,9 @@ namespace HospitalMW.Classes.Commands
 
     public class AddWorker : ICommand
     {
-        string[] ADDinput;
-        BaseWorker tempWorker;
+        private string[] ADDinput;
 
-        public string[] GetADDinput()
+        private string[] GetADDinput()
         {
             string[] ADDarr = new string[3];
             Console.WriteLine("ID?");
@@ -32,7 +32,7 @@ namespace HospitalMW.Classes.Commands
         public LocalWorkersDB Execute(LocalWorkersDB tempDB)
         {
             ADDinput = GetADDinput();
-            tempWorker = new Doctor(ADDinput[0], ADDinput[1], ADDinput[2]); 
+            BaseWorker tempWorker = WorkerFactory.CreateWorkerByParamArr(ADDinput);
             tempDB.AddWorker(tempWorker);
             return tempDB;
         }

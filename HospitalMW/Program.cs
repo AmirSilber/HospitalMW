@@ -39,28 +39,15 @@ namespace HospitalMW
 
             string adminInput = Console.ReadLine();
 
-            while (adminInput != "TERMINATE")
+            while (adminInput.ToUpper() != "TERMINATE")
             {
-                switch (adminInput.ToUpper())
-                {
-                    case "ADDWORKER":
-                        workersDB = CommandFactory.GetCommand<AddWorker>().Execute(workersDB);
-                        break;
-
-                    case "REMOVEWORKER":
-                        CommandFactory.GetCommand<RemoveWorker>().Execute(workersDB);
-                        break;
-
-                    case "VIEWSALARY":
-                        CommandFactory.GetCommand<ViewSalary>().Execute(workersDB);
-                        break;
-                        
-                    default:
-                        CommandFactory.GetCommand<NullCommand>().Execute(workersDB);
-                        break;
-                }
+                workersDB = CommandFactory.GetCommand(adminInput.ToUpper()).Execute(workersDB);
                 adminInput = Console.ReadLine();
             }
+
+            //test
+            Console.WriteLine(workersDB.GetWorker("33").CalcMonthlySalary());
+
         }
     }
 }

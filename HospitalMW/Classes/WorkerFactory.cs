@@ -6,22 +6,46 @@ using System.Threading.Tasks;
 using HospitalMW.Interfaces;
 using HospitalMW.Abstract;
 using HospitalMW.Classes.Managers;
+using HospitalMW.Classes.Ward.Doctors;
 
 namespace HospitalMW
 {
     public class WorkerFactory
     {
-        /*public static IWorker CreateWorker(string id, string name, string title)
+        //need to manually complete dictionary
+        private static Dictionary<string, Type> workerTypes = new Dictionary<string, Type>
         {
-            switch (title)
-            {
-                case "Ward Manager":
-                    return new Manager(id, name, title);
-                case ""
-            }
+            {"ward manager", typeof(WardManager)},
+            {"admin manager", typeof(AdminManager)},
+            {"vice manager", typeof(ViceManager)},
+            {"doctor", typeof(Doctor)}
+        };
 
-            Console.WriteLine("Invalid Title");
-            return null;
+        public void AddTitleToDictionary(string title, Type type)
+        {
+            workerTypes.Add(title, type);
+        }
+
+        public static BaseWorker CreateWorker(string id, string name, string title)
+        {
+            Type workerType = workerTypes[title.ToLower()];
+            BaseWorker tempWorker = (BaseWorker)Activator.CreateInstance(workerType, id, name, title);
+            return tempWorker;
+        }
+
+        public static BaseWorker CreateWorkerByParamArr(string[] paramArr)
+        {
+            Type workerType = workerTypes[paramArr[2]];
+            BaseWorker tempWorker = (BaseWorker)Activator.CreateInstance(workerType, paramArr[0], paramArr[1], paramArr[2]);
+            return tempWorker;
+        }
+
+
+        /*public static T CreateWorker<T>(string id, string name, string title) where T : IWorker
+        {
+            Type type = typeof(T);
+            Object obj = Activator.CreateInstance(type);
+            return (T)obj;
         }*/
     }
 }
