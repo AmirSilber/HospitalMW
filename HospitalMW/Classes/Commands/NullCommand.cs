@@ -7,11 +7,12 @@ using HospitalMW.Interfaces;
 
 namespace HospitalMW.Classes.Commands
 {
-    internal class NullCommand : ICommand
+    public class NullCommand : ICommand
     {
-        public void Execute()
+        public LocalWorkersDB Execute(LocalWorkersDB tempDB)
         {
             Console.WriteLine("Invalid Command");
+            return null;
         }
     }
 }

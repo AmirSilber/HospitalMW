@@ -17,7 +17,7 @@ namespace HospitalMW.Classes.Commands
         string[] ADDinput;
         BaseWorker tempWorker;
 
-        static string[] GetADDinput()
+        public string[] GetADDinput()
         {
             string[] ADDarr = new string[3];
             Console.WriteLine("ID?");
@@ -29,11 +29,12 @@ namespace HospitalMW.Classes.Commands
             return ADDarr;
         }
 
-        public void Execute()
+        public LocalWorkersDB Execute(LocalWorkersDB tempDB)
         {
             ADDinput = GetADDinput();
-            tempWorker = new Doctor(ADDinput[0], ADDinput[1], ADDinput[2]);
-
+            tempWorker = new Doctor(ADDinput[0], ADDinput[1], ADDinput[2]); 
+            tempDB.AddWorker(tempWorker);
+            return tempDB;
         }
     }
 }

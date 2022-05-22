@@ -11,10 +11,23 @@ using HospitalMW.Classes.Commands;
 
 namespace HospitalMW
 {
-    internal static  class Program
+    internal static class Program
     {
+        static string[] GetADDinput()
+        {
+            string[] ADDarr = new string[3];
+            Console.WriteLine("ID?");
+            ADDarr[0] = Console.ReadLine();
+            Console.WriteLine("Full Name?");
+            ADDarr[1] = Console.ReadLine();
+            Console.WriteLine("Title?");
+            ADDarr[2] = Console.ReadLine();
+            return ADDarr;
+        }
+
         private static void Main(string[] args)
         {
+            LocalWorkersDB workersDB = new LocalWorkersDB();
 
             Console.WriteLine("Welcome to the client, use the following commands: \n" +
                 "ADDWORKER - Add a worker to the DB \n" +
@@ -31,17 +44,19 @@ namespace HospitalMW
                 switch (adminInput.ToUpper())
                 {
                     case "ADDWORKER":
-                        CommandFactory.GetCommand<AddWorker>().Execute();
+                        workersDB = CommandFactory.GetCommand<AddWorker>().Execute(workersDB);
                         break;
+
                     case "REMOVEWORKER":
-                        CommandFactory.GetCommand<RemoveWorker>().Execute();
+                        CommandFactory.GetCommand<RemoveWorker>().Execute(workersDB);
                         break;
+
                     case "VIEWSALARY":
-                        CommandFactory.GetCommand<ViewSalary>().Execute();
+                        CommandFactory.GetCommand<ViewSalary>().Execute(workersDB);
                         break;
                         
                     default:
-                        CommandFactory.GetCommand<NullCommand>().Execute();
+                        CommandFactory.GetCommand<NullCommand>().Execute(workersDB);
                         break;
                 }
                 adminInput = Console.ReadLine();

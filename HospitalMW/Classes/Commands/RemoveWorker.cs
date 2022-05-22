@@ -9,7 +9,7 @@ namespace HospitalMW.Classes.Commands
 {
     public class RemoveWorker : ICommand
     {
-        public void Execute()
+        public LocalWorkersDB Execute(LocalWorkersDB tempDB)
         {
 
         }
