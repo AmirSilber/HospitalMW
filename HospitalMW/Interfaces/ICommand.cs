@@ -8,6 +8,6 @@ namespace HospitalMW.Interfaces
 {
     public interface ICommand
     {
-        LocalWorkersDB Execute(LocalWorkersDB tempDB);
+        void Execute(IWorkersDB tempDB);
     }
 }

@@ -6,3 +6,11 @@ C:\code\CSharp\HospitalMW\HospitalMW\HospitalMW\obj\Debug\HospitalMW.csproj.Sugg
 C:\code\CSharp\HospitalMW\HospitalMW\HospitalMW\obj\Debug\HospitalMW.csproj.CoreCompileInputs.cache
 C:\code\CSharp\HospitalMW\HospitalMW\HospitalMW\obj\Debug\HospitalMW.exe
 C:\code\CSharp\HospitalMW\HospitalMW\HospitalMW\obj\Debug\HospitalMW.pdb
+E:\Code\c#\HospitalMW\HospitalMW\obj\Debug\HospitalMW.exe
+E:\Code\c#\HospitalMW\HospitalMW\obj\Debug\HospitalMW.pdb
+E:\Code\c#\HospitalMW\HospitalMW\bin\Debug\HospitalMW.exe.config
+E:\Code\c#\HospitalMW\HospitalMW\bin\Debug\HospitalMW.exe
+E:\Code\c#\HospitalMW\HospitalMW\bin\Debug\HospitalMW.pdb
+E:\Code\c#\HospitalMW\HospitalMW\obj\Debug\HospitalMW.csproj.AssemblyReference.cache
+E:\Code\c#\HospitalMW\HospitalMW\obj\Debug\HospitalMW.csproj.SuggestedBindingRedirects.cache
+E:\Code\c#\HospitalMW\HospitalMW\obj\Debug\HospitalMW.csproj.CoreCompileInputs.cache

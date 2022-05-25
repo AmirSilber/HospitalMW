@@ -9,10 +9,9 @@ namespace HospitalMW.Classes.Commands
 {
     public class NullCommand : ICommand
     {
-        public LocalWorkersDB Execute(LocalWorkersDB tempDB)
+        public IWorkersDB Execute(IWorkersDB tempDB)
         {
             Console.WriteLine("Invalid Command");
-            return null;
         }
     }
 }

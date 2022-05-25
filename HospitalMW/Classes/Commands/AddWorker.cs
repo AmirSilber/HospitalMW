@@ -14,7 +14,7 @@ namespace HospitalMW.Classes.Commands
 {
 
     public class AddWorker : ICommand
-    {
+    { 
         private string[] ADDinput;
 
         private string[] GetADDinput()
@@ -29,12 +29,11 @@ namespace HospitalMW.Classes.Commands
             return ADDarr;
         }
 
-        public LocalWorkersDB Execute(LocalWorkersDB tempDB)
+        public void Execute(IWorkersDB workersDB)
         {
             ADDinput = GetADDinput();
             BaseWorker tempWorker = WorkerFactory.CreateWorkerByParamArr(ADDinput);
-            tempDB.AddWorker(tempWorker);
-            return tempDB;
+            workersDB.AddWorker(tempWorker);
         }
     }
 }

@@ -41,11 +41,15 @@ namespace HospitalMW
         }
 
 
-        /*public static T CreateWorker<T>(string id, string name, string title) where T : IWorker
-        {
+       public IWorker CreateWorker<T>(Type workerType, string id, string name, string title) where T : IWorker
+       {
+           var a = new workerType(id, name, title);
             Type type = typeof(T);
             Object obj = Activator.CreateInstance(type);
             return (T)obj;
-        }*/
+        }
+        
+        
+        
     }
 }

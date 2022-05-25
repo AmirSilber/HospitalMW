@@ -15,7 +15,7 @@ namespace HospitalMW.Classes.Commands
             return Console.ReadLine();
         }
 
-        public LocalWorkersDB Execute(LocalWorkersDB tempDB)
+        public IWorkersDB Execute(IWorkersDB tempDB)
         {
             string tempID = GetREMOVEinput();
             tempDB.RemoveWorker(tempDB.GetWorker(tempID));

@@ -6,13 +6,13 @@ using System.Text;
 using System.Threading.Tasks;
 using HospitalMW.Interfaces;
 
-namespace HospitalMW
+namespace HospitalMW 
 {
-    public class LocalWorkersDB
+    public class LocalWorkersDB: IWorkersDB
     {
 
         private Dictionary<string, BaseWorker> workers;
-        public LocalWorkersDB()
+        public LocalWorkersDB() 
         {
             this.workers = new Dictionary<string, BaseWorker>();
         }
@@ -35,9 +35,9 @@ namespace HospitalMW
             }
         }
 
-        public BaseWorker GetWorker(string workerid)
+        public BaseWorker GetWorker(string workerID)
         {
-            return this.workers[workerid];
+            return this.workers[workerID];
         }
 
         //public LocalWorkersDB Execute(LocalWorkersDB tempDB) { return tempDB; }

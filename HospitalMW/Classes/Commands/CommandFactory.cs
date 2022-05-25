@@ -9,16 +9,11 @@ namespace HospitalMW.Classes.Commands
 {
     public class CommandFactory
     {
-        private static Dictionary<string, Type> cmdTypes = new Dictionary<string, Type>
-        {
-            {"ADDWORKER", typeof(AddWorker)},
-            {"REMOVEWORKER", typeof(RemoveWorker)},
-            {"VIEWSALARY", typeof(ViewSalary)}
-        };
+        private Dictionary<string, ICommand> cmdTypes = new Dictionary<string, ICommand> { };
         
-        public void AddCmdToDictionary(string cmdName, Type type)
+        public void AddCommand(string cmdName, ICommand command)
         {
-            cmdTypes.Add(cmdName.ToUpper(), type);
+            cmdTypes.Add(cmdName.ToUpper(), command);
         }
 
         public static ICommand GetCommand(string cmd)
@@ -36,5 +31,10 @@ namespace HospitalMW.Classes.Commands
             Object obj = Activator.CreateInstance(type);
             return (T)obj;
         }*/
+
+        private void RunCommand(string command)
+        {
+            this.cmdTypes[command].Execute();
+        }
     }
 }
