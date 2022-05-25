@@ -13,17 +13,6 @@ namespace HospitalMW
 {
     internal static class Program
     {
-        static string[] GetADDinput()
-        {
-            string[] ADDarr = new string[3];
-            Console.WriteLine("ID?");
-            ADDarr[0] = Console.ReadLine();
-            Console.WriteLine("Full Name?");
-            ADDarr[1] = Console.ReadLine();
-            Console.WriteLine("Title?");
-            ADDarr[2] = Console.ReadLine();
-            return ADDarr;
-        }
 
         private static void Main(string[] args)
         {
@@ -47,6 +36,8 @@ namespace HospitalMW
 
             //test
             Console.WriteLine(workersDB.GetWorker("33").CalcMonthlySalary());
+            Console.WriteLine(workersDB.GetWorker("33").Name);
+
 
         }
     }

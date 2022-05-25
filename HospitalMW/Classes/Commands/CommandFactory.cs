@@ -15,8 +15,8 @@ namespace HospitalMW.Classes.Commands
             {"REMOVEWORKER", typeof(RemoveWorker)},
             {"VIEWSALARY", typeof(ViewSalary)}
         };
-
-        public void AddTitleToDictionary(string cmdName, Type type)
+        
+        public void AddCmdToDictionary(string cmdName, Type type)
         {
             cmdTypes.Add(cmdName.ToUpper(), type);
         }

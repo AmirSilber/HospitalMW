@@ -9,8 +9,16 @@ namespace HospitalMW.Classes.Commands
 {
     public class ViewSalary : ICommand
     {
+        private static string GetVIEWSALARYinput()
+        {
+            Console.WriteLine("ID?");
+            return Console.ReadLine();
+        }
+
         public LocalWorkersDB Execute(LocalWorkersDB tempDB)
         {
+            string tempID = GetVIEWSALARYinput();
+            tempDB.GetWorker(tempID).DisplayCurrentSalary();
             return tempDB;
         }
     }

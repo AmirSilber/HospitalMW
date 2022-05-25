@@ -9,8 +9,16 @@ namespace HospitalMW.Classes.Commands
 {
     public class RemoveWorker : ICommand
     {
+        private static string GetREMOVEinput()
+        {
+            Console.WriteLine("ID?");
+            return Console.ReadLine();
+        }
+
         public LocalWorkersDB Execute(LocalWorkersDB tempDB)
         {
+            string tempID = GetREMOVEinput();
+            tempDB.RemoveWorker(tempDB.GetWorker(tempID));
             return tempDB;
         }
     }

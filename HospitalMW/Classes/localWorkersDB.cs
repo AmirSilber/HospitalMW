@@ -22,6 +22,11 @@ namespace HospitalMW
             this.workers.Add(newWorker.id, newWorker);
         }
 
+        public void RemoveWorker(BaseWorker oldWorker)
+        {
+            this.workers.Remove(oldWorker.id);
+        }
+
         public void AddListOfWorkers(List<BaseWorker> arrayOfNewWorkers)
         {
             foreach (BaseWorker newWorker in arrayOfNewWorkers)
